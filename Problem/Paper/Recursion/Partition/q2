@@ -1,0 +1,37 @@
+For a given positive integer, we want to partition it into the sum of
+some positive integers, or itself. For example, 1 to 4 can be
+partitioned as
+
+1 = 1        2 = 1 + 1        3 = 1 + 1 + 1       4 = 1 + 1 + 1 + 1
+               = 2              = 1 + 2             = 1 + 1 + 2
+                                = 2 + 1             = 1 + 2 + 1
+                                = 3                 = 1 + 3
+                                                    = 2 + 1 + 1
+                                                    = 2 + 2
+                                                    = 3 + 1
+                                                    = 4
+
+By observation, there is 
+   one way to partition 1.
+   two ways to partition 2.
+   four ways to partition 3.
+   eight ways to partition 4.
+
+In general, there are exp2(n-1) ways to partition value n.  
+
+In the above examples,
+   when partitioning 1, "+" is not used.
+   when partitioning 2, "+" is used once.
+   when partitioning 3, "+" is used four times.
+   when partitioning 4, "+" is used twelve times.
+
+When partitioning value n (n > 4), how many times is "+" used?
+
+You can use the following table to validate your formula.  If your
+formula does not match these cases, the formula is definitely wrong.
+However, matching these cases does not mean your formula is correct.
+You must have a systematic way to find the formula.  Do not try to
+find a formula to match these values.
+
+n      1   2   3    4    5    6    7     8 
+f(n)   0   1   4   12   32   80   192   448 

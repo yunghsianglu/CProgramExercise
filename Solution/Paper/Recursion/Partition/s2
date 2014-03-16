@@ -1,0 +1,38 @@
+f(1) = 0
+f(2) = 1
+f(3) = 4
+f(4) = 12
+
+To partition n and n > 4
+
+When the first number is 1, "+" is used between the first number and
+remaining numbers.  There are exp2(n - 2) lines.  "+" is used f(n - 1)
+times for the remaining numbers.
+
+When the first number is 2, "+" is used between the first number and
+remaining numbers.  There are exp2(n - 3) lines.  "+" is used f(n - 2)
+times for the remaining numbers.
+
+The recursive equation is
+
+f(n) = exp2(n - 2) + f(n - 1) + 
+       exp2(n - 3) + f(n - 2) + 
+       exp2(n - 4) + f(n - 3) + 
+       ... +
+       exp(0) + f(1) +      // first number is n - 1 and second number is 1
+       0                    // first number is n, no second number 
+       
+replace n by n + 1
+
+f(n + 1) = exp2(n - 1) + f(n) + 
+           exp2(n - 2) + f(n - 1) + 
+           exp2(n - 3) + f(n - 2) + 
+           ... +
+           exp(0) + f(1) +   
+           0  
+
+f(n + 1) - f(n) = f(n) + exp2(n - 1) 
+
+f(n + 1) = 2 f(n) + exp2(n - 1) 
+
+f(n) = (n - 1) exp2(n - 2)
