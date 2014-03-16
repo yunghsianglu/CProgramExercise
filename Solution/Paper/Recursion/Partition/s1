@@ -1,0 +1,29 @@
+f(1) = 0
+f(2) = 0
+f(3) = 1
+f(4) = 2
+
+When the first number is 1, "3" is not used for the first number and
+is used f(n - 1) times for the remaining numbers.
+
+When the first number is 2, "3" is not used for the first number and
+is used f(n - 2) times for the remaining numbers.
+
+When the first number is 3, "3" is used once every line for the first
+number and is used f(n - 3) times for the remaining numbers.  There
+are exp2(n - 4) lines.
+
+When the first number is k (k > 3), "3" is not used for the first
+number and is used f(n - k) times for the remaining numbers.
+
+The recursive equation is
+
+f(n) = f(n - 1) + f(n - 2) + exp2(n - 4) + f(n - 3) + ... + f(1)
+
+replace n by n + 1
+
+f(n + 1) = f(n) + f(n - 1) + exp2(n - 3) + f(n - 2) + ... + f(1)
+
+f(n + 1) - f(n) = f(n) + exp2(n - 3) - exp2(n - 4) = f(n) + exp2(n - 4)
+
+f(n) = n exp2(n - 5)
