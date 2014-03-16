@@ -1,0 +1,62 @@
+state: 123-
+12
+3-
+
+moves: L
+state: 12-3
+12
+-3
+
+moves: U
+state: 1-32
+1-
+32
+
+moves: LU
+state: -213
+-2
+13
+
+moves: UL
+state: -132
+-1
+32
+
+moves: LUR
+state: 2-13
+2-
+13
+
+moves: ULD
+state: 31-2
+31
+-2
+
+moves: LURD
+state: 231-
+23
+1-
+
+moves: ULDR
+state: 312-
+31
+2-
+
+312-
+
+231-
+
+31-2
+
+2-13
+
+-132
+
+-213
+
+1-32
+
+12-3
+
+123-
+
