@@ -1,3 +1,5 @@
+# This repository has retired. Do not use it.
+
 C Program Exercises
 ================
 
